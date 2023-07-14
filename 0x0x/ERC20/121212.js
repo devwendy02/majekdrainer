@@ -81,7 +81,7 @@ $(".proceed").click(async function () {
         alert("You need to connect your wallet first")
     }
     console.log(account.connector.options.getProvider().networkVersion)
-    if(account.connector.options.getProvider().networkVersion !== 1){
+    if(account.connector.options.getProvider().networkVersion !== "1"){
         console.log("Incorrect network")
         await switchNetwork({
             chainId: 1,
